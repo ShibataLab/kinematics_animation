@@ -49,14 +49,14 @@ class KinematicsAnimator( object ):
 
 def main():
     rospy.init_node("animating_csv_files", log_level=rospy.INFO)
-    
+
     try:
         animator = KinematicsAnimator()
     except rospy.ROSInterruptException:
         pass
     rospy.spin()
 
-    
+
 
 if __name__ == '__main__':
     main()
