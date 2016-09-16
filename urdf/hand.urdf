@@ -1,0 +1,732 @@
+<robot name="test_robot">
+	<link name="base_link" >
+		<visual>
+		    <origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<box size="0.01 0.085 0.1"/>
+			</geometry>
+		</visual>	
+	</link>
+
+	<link name="j_thumb" >
+		<visual>
+		    <origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<box size="0.01 0.01 0.01"/>
+			</geometry>
+			<material name="Cyan1">
+	       		<color rgba="0 0.9 0.9 1.0"/>
+	     	</material>
+		</visual>	
+	</link>		
+
+	<link name="j_thumb1" >
+		<visual>
+		    <origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<box size="0.01 0.01 0.01"/>
+			</geometry>
+			<material name="Cyan1">
+	       		<color rgba="0 0.9 0.9 1.0"/>
+	     	</material>
+		</visual>	
+	</link>
+
+	<link name="thumb1" >
+		<visual>
+		    <origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.005" length="0.02"/>
+			</geometry>
+			<material name="Cyan1">
+	       		<color rgba="0 0.9 0.9 1.0"/>
+	     	</material>
+		</visual>	
+	</link>
+
+	<link name="j_thumb2" >
+		<visual>
+		    <origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<box size="0.01 0.01 0.01"/>
+			</geometry>
+			<material name="Cyan1">
+	       		<color rgba="0 0.9 0.9 1.0"/>
+	     	</material>
+		</visual>	
+	</link>
+
+	<link name="thumb2" >
+		<visual>
+		    <origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.005" length="0.02"/>
+			</geometry>
+			<material name="Cyan1">
+	       		<color rgba="0 0.9 0.9 1.0"/>
+	     	</material>
+		</visual>	
+	</link>
+
+	<link name="j_thumb3" >
+		<visual>
+		    <origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<box size="0.01 0.01 0.01"/>
+			</geometry>
+			<material name="Cyan1">
+	       		<color rgba="0 0.9 0.9 1.0"/>
+	     	</material>
+		</visual>	
+	</link>
+
+	<link name="j_index" >
+		<visual>
+		    <origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<box size="0.01 0.01 0.01"/>
+			</geometry>
+			<material name="Cyan1">
+	       		<color rgba="1.0 1.0 1.0 1.0"/>
+	     	</material>
+		</visual>	
+	</link>
+
+	<link name="j_index1" >
+		<visual>
+		    <origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<box size="0.01 0.01 0.01"/>
+			</geometry>
+			<material name="Cyan1">
+	       		<color rgba="1.0 1.0 1.0 1.0"/>
+	     	</material>
+		</visual>	
+	</link>
+
+	<link name="index1" >
+		<visual>
+		    <origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.005" length="0.02"/>
+			</geometry>
+			<material name="Cyan1">
+	       		<color rgba="1.0 0 0 1.0"/>
+	     	</material>
+		</visual>	
+	</link>
+
+	<link name="j_index2" >
+		<visual>
+		    <origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<box size="0.01 0.01 0.01"/>
+			</geometry>
+			<material name="Cyan1">
+	       		<color rgba="1.0 1.0 1.0 1.0"/>
+	     	</material>
+		</visual>	
+	</link>
+
+	<link name="index2" >
+		<visual>
+		    <origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.005" length="0.02"/>
+			</geometry>
+			<material name="Cyan1">
+	       		<color rgba="0 1.0 0 1.0"/>
+	     	</material>
+		</visual>	
+	</link>
+
+	<link name="j_index3" >
+		<visual>
+		    <origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<box size="0.01 0.01 0.01"/>
+			</geometry>
+			<material name="Cyan1">
+	       		<color rgba="1.0 1.0 1.0 1.0"/>
+	     	</material>
+		</visual>	
+	</link>
+
+	<link name="index3" >
+		<visual>
+		    <origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.005" length="0.02"/>
+			</geometry>
+			<material name="Cyan1">
+	       		<color rgba="0 0.9 0.9 1.0"/>
+	     	</material>
+		</visual>	
+	</link>
+
+	<link name="j_index4" >
+		<visual>
+		    <origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<box size="0.01 0.01 0.01"/>
+			</geometry>
+			<material name="Cyan1">
+	       		<color rgba="1.0 1.0 1.0 1.0"/>
+	     	</material>
+		</visual>	
+	</link>
+
+	<link name="j_middle" >
+		<visual>
+		    <origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<box size="0.01 0.01 0.01"/>
+			</geometry>
+			<material name="Cyan1">
+	       		<color rgba="1.0 1.0 1.0 1.0"/>
+	     	</material>
+		</visual>	
+	</link>
+
+	<link name="j_middle1" >
+		<visual>
+		    <origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<box size="0.01 0.01 0.01"/>
+			</geometry>
+			<material name="Cyan1">
+	       		<color rgba="1.0 1.0 1.0 1.0"/>
+	     	</material>
+		</visual>	
+	</link>
+
+	<link name="middle1" >
+		<visual>
+		    <origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.005" length="0.03"/>
+			</geometry>
+			<material name="Cyan1">
+	       		<color rgba="1.0 0 0 1.0"/>
+	     	</material>
+		</visual>	
+	</link>
+
+	<link name="j_middle2" >
+		<visual>
+		    <origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<box size="0.01 0.01 0.01"/>
+			</geometry>
+			<material name="Cyan1">
+	       		<color rgba="1.0 1.0 1.0 1.0"/>
+	     	</material>
+		</visual>	
+	</link>
+
+	<link name="middle2" >
+		<visual>
+		    <origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.005" length="0.03"/>
+			</geometry>
+			<material name="Cyan1">
+	       		<color rgba="0 1.0 0 1.0"/>
+	     	</material>
+		</visual>	
+	</link>
+
+	<link name="j_middle3" >
+		<visual>
+		    <origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<box size="0.01 0.01 0.01"/>
+			</geometry>
+			<material name="Cyan1">
+	       		<color rgba="1.0 1.0 1.0 1.0"/>
+	     	</material>
+		</visual>	
+	</link>
+
+	<link name="middle3" >
+		<visual>
+		    <origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.005" length="0.03"/>
+			</geometry>
+			<material name="Cyan1">
+	       		<color rgba="0 0.9 0.9 1.0"/>
+	     	</material>
+		</visual>	
+	</link>
+
+	<link name="j_middle4" >
+		<visual>
+		    <origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<box size="0.01 0.01 0.01"/>
+			</geometry>
+			<material name="Cyan1">
+	       		<color rgba="1.0 1.0 1.0 1.0"/>
+	     	</material>
+		</visual>	
+	</link>
+
+	<link name="j_ring" >
+		<visual>
+		    <origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<box size="0.01 0.01 0.01"/>
+			</geometry>
+			<material name="Cyan1">
+	       		<color rgba="1.0 1.0 1.0 1.0"/>
+	     	</material>
+		</visual>	
+	</link>
+
+	<link name="j_ring1" >
+		<visual>
+		    <origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<box size="0.01 0.01 0.01"/>
+			</geometry>
+			<material name="Cyan1">
+	       		<color rgba="1.0 1.0 1.0 1.0"/>
+	     	</material>
+		</visual>	
+	</link>
+
+	<link name="ring1" >
+		<visual>
+		    <origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.005" length="0.02"/>
+			</geometry>
+			<material name="Cyan1">
+	       		<color rgba="1.0 0 0 1.0"/>
+	     	</material>
+		</visual>	
+	</link>
+
+	<link name="j_ring2" >
+		<visual>
+		    <origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<box size="0.01 0.01 0.01"/>
+			</geometry>
+			<material name="Cyan1">
+	       		<color rgba="1.0 1.0 1.0 1.0"/>
+	     	</material>
+		</visual>	
+	</link>
+
+	<link name="ring2" >
+		<visual>
+		    <origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.005" length="0.02"/>
+			</geometry>
+			<material name="Cyan1">
+	       		<color rgba="0 1.0 0 1.0"/>
+	     	</material>
+		</visual>	
+	</link>
+
+	<link name="j_ring3" >
+		<visual>
+		    <origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<box size="0.01 0.01 0.01"/>
+			</geometry>
+			<material name="Cyan1">
+	       		<color rgba="1.0 1.0 1.0 1.0"/>
+	     	</material>
+		</visual>	
+	</link>
+
+	<link name="ring3" >
+		<visual>
+		    <origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.005" length="0.02"/>
+			</geometry>
+			<material name="Cyan1">
+	       		<color rgba="0 0.9 0.9 1.0"/>
+	     	</material>
+		</visual>	
+	</link>
+
+	<link name="j_ring4" >
+		<visual>
+		    <origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<box size="0.01 0.01 0.01"/>
+			</geometry>
+			<material name="Cyan1">
+	       		<color rgba="1.0 1.0 1.0 1.0"/>
+	     	</material>
+		</visual>	
+	</link>
+
+	<link name="j_little" >
+		<visual>
+		    <origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<box size="0.01 0.01 0.01"/>
+			</geometry>
+			<material name="Cyan1">
+	       		<color rgba="1.0 1.0 1.0 1.0"/>
+	     	</material>
+		</visual>	
+	</link>
+
+	<link name="j_little1" >
+		<visual>
+		    <origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<box size="0.01 0.01 0.01"/>
+			</geometry>
+			<material name="Cyan1">
+	       		<color rgba="1.0 1.0 1.0 1.0"/>
+	     	</material>
+		</visual>	
+	</link>
+
+	<link name="little1" >
+		<visual>
+		    <origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.005" length="0.015"/>
+			</geometry>
+			<material name="Cyan1">
+	       		<color rgba="1.0 0 0 1.0"/>
+	     	</material>
+		</visual>	
+	</link>
+
+	<link name="j_little2" >
+		<visual>
+		    <origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<box size="0.01 0.01 0.01"/>
+			</geometry>
+			<material name="Cyan1">
+	       		<color rgba="1.0 1.0 1.0 1.0"/>
+	     	</material>
+		</visual>	
+	</link>
+
+	<link name="little2" >
+		<visual>
+		    <origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.005" length="0.015"/>
+			</geometry>
+			<material name="Cyan1">
+	       		<color rgba="0 1.0 0 1.0"/>
+	     	</material>
+		</visual>	
+	</link>
+
+	<link name="j_little3" >
+		<visual>
+		    <origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<box size="0.01 0.01 0.01"/>
+			</geometry>
+			<material name="Cyan1">
+	       		<color rgba="1.0 1.0 1.0 1.0"/>
+	     	</material>
+		</visual>	
+	</link>
+
+	<link name="little3" >
+		<visual>
+		    <origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.005" length="0.015"/>
+			</geometry>
+			<material name="Cyan1">
+	       		<color rgba="0 0.9 0.9 1.0"/>
+	     	</material>
+		</visual>	
+	</link>
+
+	<link name="j_little4" >
+		<visual>
+		    <origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<box size="0.01 0.01 0.01"/>
+			</geometry>
+			<material name="Cyan1">
+	       		<color rgba="1.0 1.0 1.0 1.0"/>
+	     	</material>
+		</visual>	
+	</link>
+
+	<joint name="j_thumb" type="continuous">
+		<parent link="base_link"/>
+		<child link="j_thumb"/>
+		<origin xyz="0 -0.05 0" rpy="0 0 0" />
+		<limit lower="-1.57" upper="0" effort="10" velocity="3"/>
+		<axis xyz="1 0 0" />
+	</joint>
+
+	<joint name="j_thumb1" type="continuous">
+		<parent link="j_thumb"/>
+		<child link="j_thumb1"/>
+		<origin xyz="0 0 0" rpy="0 0 0" />
+		<limit lower="-1.57" upper="0" effort="10" velocity="3"/>
+		<axis xyz="1 0 0" />
+	</joint>
+
+	<joint name="j_thumb2" type="fixed">
+		<parent link="j_thumb1"/>
+		<child link="thumb1"/>
+		<origin xyz="0 0 0" rpy="0 0 0" />
+	</joint>
+
+	<joint name="j_thumb3" type="continuous">
+		<parent link="thumb1"/>
+		<child link="j_thumb2"/>
+		<origin xyz="0 -0.0125 0.025" rpy="0 0 0" />
+		<limit lower="-1.57" upper="0" effort="10" velocity="3"/>
+		<axis xyz="1 0 0" />
+	</joint>
+
+	<joint name="j_thumb4" type="fixed">
+		<parent link="j_thumb2"/>
+		<child link="thumb2"/>
+		<origin xyz="0 0 0" rpy="0 0 0" />
+	</joint>
+
+	<joint name="j_thumb5" type="fixed">
+		<parent link="thumb2"/>
+		<child link="j_thumb3"/>
+		<origin xyz="0 -0.0125 0.025" rpy="0 0 0" />
+	</joint>
+
+	<joint name="j_index" type="revolute">
+		<parent link="base_link"/>
+		<child link="j_index"/>
+		<origin xyz="0 -0.0375 0.05" rpy="0 0 0" />
+		<limit lower="-0.26" upper="0.26" effort="10" velocity="3"/>
+		<axis xyz="1 0 0" />
+	</joint>
+
+	<joint name="j_index1" type="revolute">
+		<parent link="j_index"/>
+		<child link="j_index1"/>
+		<origin xyz="0 0 0" rpy="0 0 0" />
+		<limit lower="-1.57" upper="0" effort="10" velocity="3"/>
+		<axis xyz="0 1 0" />
+	</joint>
+
+	<joint name="j_index2" type="fixed">
+		<parent link="j_index1"/>
+		<child link="index1"/>
+		<origin xyz="0 0 0" rpy="0 0 0" />
+	</joint>
+
+	<joint name="j_index3" type="continuous">
+		<parent link="index1"/>
+		<child link="j_index2"/>
+		<origin xyz="0 0 0.02" rpy="0 0 0" />
+		<limit lower="-1.57" upper="0" effort="10" velocity="3"/>
+		<axis xyz="0 1 0" />
+	</joint>
+
+	<joint name="j_index4" type="fixed">
+		<parent link="j_index2"/>
+		<child link="index2"/>
+		<origin xyz="0 0 0" rpy="0 0 0" />
+	</joint>
+
+	<joint name="j_index5" type="continuous">
+		<parent link="index2"/>
+		<child link="j_index3"/>
+		<origin xyz="0 0 0.02" rpy="0 0 0" />
+		<limit lower="-1.57" upper="0" effort="10" velocity="3"/>
+		<axis xyz="0 1 0" />
+	</joint>
+
+	<joint name="j_index6" type="fixed">
+		<parent link="j_index3"/>
+		<child link="index3"/>
+		<origin xyz="0 0 0" rpy="0 0 0" />
+	</joint>
+
+	<joint name="j_index7" type="fixed">
+		<parent link="index3"/>
+		<child link="j_index4"/>
+		<origin xyz="0 0 0.02" rpy="0 0 0" />
+	</joint>
+
+	<joint name="j_middle" type="fixed">
+		<parent link="base_link"/>
+		<child link="j_middle"/>
+		<origin xyz="0 -0.0125 0.05" rpy="0 0 0" />
+		<limit lower="-0.785" upper="0.785" effort="10" velocity="3"/>
+		<axis xyz="1 0 0" />
+	</joint>
+
+	<joint name="j_middle1" type="revolute">
+		<parent link="j_middle"/>
+		<child link="j_middle1"/>
+		<origin xyz="0 0 0" rpy="0 0 0" />
+		<limit lower="-1.57" upper="0" effort="10" velocity="3"/>
+		<axis xyz="0 1 0" />
+	</joint>
+
+	<joint name="j_middle2" type="fixed">
+		<parent link="j_middle1"/>
+		<child link="middle1"/>
+		<origin xyz="0 0 0" rpy="0 0 0" />
+	</joint>
+
+	<joint name="j_middle3" type="continuous">
+		<parent link="middle1"/>
+		<child link="j_middle2"/>
+		<origin xyz="0 0 0.03" rpy="0 0 0" />
+		<limit lower="-1.57" upper="0" effort="10" velocity="3"/>
+		<axis xyz="0 1 0" />
+	</joint>
+
+	<joint name="j_middle4" type="fixed">
+		<parent link="j_middle2"/>
+		<child link="middle2"/>
+		<origin xyz="0 0 0" rpy="0 0 0" />
+	</joint>
+
+	<joint name="j_middle5" type="continuous">
+		<parent link="middle2"/>
+		<child link="j_middle3"/>
+		<origin xyz="0 0 0.03" rpy="0 0 0" />
+		<limit lower="-1.57" upper="0" effort="10" velocity="3"/>
+		<axis xyz="0 1 0" />
+	</joint>
+
+	<joint name="j_middle6" type="fixed">
+		<parent link="j_middle3"/>
+		<child link="middle3"/>
+		<origin xyz="0 0 0" rpy="0 0 0" />
+	</joint>
+
+	<joint name="j_middle7" type="fixed">
+		<parent link="middle3"/>
+		<child link="j_middle4"/>
+		<origin xyz="0 0 0.03" rpy="0 0 0" />
+	</joint>
+
+	<joint name="j_ring" type="revolute">
+		<parent link="base_link"/>
+		<child link="j_ring"/>
+		<origin xyz="0 0.0125 0.05" rpy="0 0 0" />
+		<limit lower="-0.26" upper="0.26" effort="10" velocity="3"/>
+		<axis xyz="1 0 0" />
+	</joint>
+
+	<joint name="j_ring1" type="revolute">
+		<parent link="j_ring"/>
+		<child link="j_ring1"/>
+		<origin xyz="0 0 0" rpy="0 0 0" />
+		<limit lower="-1.57" upper="0" effort="10" velocity="3"/>
+		<axis xyz="0 1 0" />
+	</joint>
+
+	<joint name="j_ring2" type="fixed">
+		<parent link="j_ring1"/>
+		<child link="ring1"/>
+		<origin xyz="0 0 0" rpy="0 0 0" />
+	</joint>
+
+	<joint name="j_ring3" type="continuous">
+		<parent link="ring1"/>
+		<child link="j_ring2"/>
+		<origin xyz="0 0 0.02" rpy="0 0 0" />
+		<limit lower="-1.57" upper="0" effort="10" velocity="3"/>
+		<axis xyz="0 1 0" />
+	</joint>
+
+	<joint name="j_ring4" type="fixed">
+		<parent link="j_ring2"/>
+		<child link="ring2"/>
+		<origin xyz="0 0 0" rpy="0 0 0" />
+	</joint>
+
+	<joint name="j_ring5" type="continuous">
+		<parent link="ring2"/>
+		<child link="j_ring3"/>
+		<origin xyz="0 0 0.02" rpy="0 0 0" />
+		<limit lower="-1.57" upper="0" effort="10" velocity="3"/>
+		<axis xyz="0 1 0" />
+	</joint>
+
+	<joint name="j_ring6" type="fixed">
+		<parent link="j_ring3"/>
+		<child link="ring3"/>
+		<origin xyz="0 0 0" rpy="0 0 0" />
+	</joint>
+
+	<joint name="j_ring7" type="fixed">
+		<parent link="ring3"/>
+		<child link="j_ring4"/>
+		<origin xyz="0 0 0.02" rpy="0 0 0" />
+	</joint>
+
+	<joint name="j_little" type="revolute">
+		<parent link="base_link"/>
+		<child link="j_little"/>
+		<origin xyz="0 0.0375 0.05" rpy="0 0 0" />
+		<limit lower="-0.26" upper="0.26" effort="10" velocity="3"/>
+		<axis xyz="1 0 0" />
+	</joint>
+
+	<joint name="j_little1" type="revolute">
+		<parent link="j_little"/>
+		<child link="j_little1"/>
+		<origin xyz="0 0 0" rpy="0 0 0" />
+		<limit lower="-1.57" upper="0" effort="10" velocity="3"/>
+		<axis xyz="0 1 0" />
+	</joint>
+
+	<joint name="j_little2" type="fixed">
+		<parent link="j_little1"/>
+		<child link="little1"/>
+		<origin xyz="0 0 0" rpy="0 0 0" />
+	</joint>
+
+	<joint name="j_little3" type="continuous">
+		<parent link="little1"/>
+		<child link="j_little2"/>
+		<origin xyz="0 0 0.015" rpy="0 0 0" />
+		<limit lower="-1.57" upper="0" effort="10" velocity="3"/>
+		<axis xyz="0 1 0" />
+	</joint>
+
+	<joint name="j_little4" type="fixed">
+		<parent link="j_little2"/>
+		<child link="little2"/>
+		<origin xyz="0 0 0" rpy="0 0 0" />
+	</joint>
+
+	<joint name="j_little5" type="continuous">
+		<parent link="little2"/>
+		<child link="j_little3"/>
+		<origin xyz="0 0 0.015" rpy="0 0 0" />
+		<limit lower="-1.57" upper="0" effort="10" velocity="3"/>
+		<axis xyz="0 1 0" />
+	</joint>
+
+	<joint name="j_little6" type="fixed">
+		<parent link="j_little3"/>
+		<child link="little3"/>
+		<origin xyz="0 0 0" rpy="0 0 0" />
+	</joint>
+
+	<joint name="j_little7" type="fixed">
+		<parent link="little3"/>
+		<child link="j_little4"/>
+		<origin xyz="0 0 0.015" rpy="0 0 0" />
+	</joint>
+</robot>
