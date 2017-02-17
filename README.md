@@ -3,6 +3,9 @@ A robotic manipulator visualization and animation tool developed to support baxt
 
 *forked from [sherifm/kinematics_animation](https://github.com/sherifm/kinematics_animation)*
 
+## Dependencies
+1. scipy (sudo pip install -U scipy)
+
 ### Installation Steps
 1. Change the directory to src folder of ros workspace
 2. Clone the repo (or download accordingly)
