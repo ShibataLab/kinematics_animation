@@ -5,7 +5,7 @@ A robotic manipulator visualization and animation tool developed to support baxt
 
 ### Installation Steps
 1. Change the directory to src folder of ros workspace
-2. Clone the repo by running following command `git clone https://github.com/ShibataLab/kinematics_animation.git`
+2. Clone the repo (or download accordingly)
 3. After successful cloning, go back to ros workspace
 4. Run `catkin_make` command 
 
