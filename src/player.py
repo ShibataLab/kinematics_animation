@@ -6,10 +6,11 @@ import numpy as np
 from scipy.interpolate import interp1d
 from sensor_msgs.msg import JointState
 
+
 class KinematicsAnimator(object):
     def __init__(self):
         freq = rospy.get_param('~freq', 50)
-        rospy.loginfo('Publishing frequency = ' + str(freq))
+        rospy.loginfo('Publishing frequency = %f' % freq)
 
         fname = rospy.get_param('~file', None)
         if fname is None:
@@ -18,51 +19,56 @@ class KinematicsAnimator(object):
         else:
             # Find out the absolute path if the input path is relative
             if not os.path.isabs(fname):
-                fname =  os.path.abspath(fname)
-            rospy.loginfo('CSV file absolute path = ' + fname)
-
-        self.rate = rospy.get_param('~rate', 1.0)
-
-        rospy.loginfo('Time scaling = ' + str(self.rate))
+                fname = os.path.abspath(fname)
+            rospy.loginfo('CSV file absolute path = %s' % fname)
 
         # load data from csv file
-        with open(fname, 'r') as f:
-            fline = f.readline()
-        self.names = fline.rstrip('\r\n').split(',')
-        self.names = self.names[1:]
-        self.dat = np.loadtxt(fname, skiprows=1, delimiter=',')
-        self._fint = interp1d(1 / float(self.rate) * self.dat[:, 0],
-                              self.dat[:, 1:], kind='linear', axis=0)
+        self.data, file_header = self.read_csv(fname)
+        joint_info = {idx: name for idx, name in enumerate(file_header)
+                      if name.startswith('left_')
+                      or name.startswith('right_')}
+
+        joint_ids = joint_info.keys()
+        self.data = self.data[:, joint_ids]
+        self.joint_names = joint_info.values()
+
+        self.row_number = 0
         self.base_time = rospy.Time.now()
 
         # create a joint_states publisher
         self.state_pub = rospy.Publisher('joint_states', JointState,
-                latch=True, queue_size=3)
+                                         latch=True, queue_size=3)
 
         # create a timer
         self.pbtimer = rospy.Timer(rospy.Duration(1 / float(freq)),
                                    self.timercb)
-        return
+
+    def read_csv(self, file_name):
+        # load the data files
+        data = np.genfromtxt(file_name, delimiter=',', names=True)
+        # get single header string
+        header = data.dtype.names
+        # convert structured array to numpy array
+        data = data.view(np.float).reshape(data.shape + (-1,))
+        return data, header
 
     def timercb(self, time_dat):
         t = (rospy.Time.now() - self.base_time).to_sec()
-        try:
-            q = self._fint(t)
-        except ValueError:
-            # rospy.loginfo(str(t)+" q = " + str(q))
-            q = self._fint.y[-1]
-            if t - self._fint.x[-1] > 2.0:
-                rospy.loginfo('Animation complete! Replaying it.')
-                self.base_time = rospy.Time.now()
+        q = self.data[self.row_number]
+        self.row_number += 1
+        if self.row_number >= self.data.shape[0]:
+            rospy.loginfo('Animation complete! Replaying it.')
+            self.row_number = 0
+            self.base_time = rospy.Time.now()
 
         '''
-        ; Provide all the joint names
-        ; We are assuming here that the input csv file doesn't have head and finger information
+        ' Provide all the joint names
+        ' We are assuming here that the input csv file doesn't have head and finger information
         '''
         joint_names = ['head_pan', 'l_gripper_l_finger_joint',
                        'l_gripper_r_finger_joint',
                        'r_gripper_l_finger_joint',
-                       'r_gripper_r_finger_joint'] + self.names
+                       'r_gripper_r_finger_joint'] + self.joint_names
 
         # Setting the head and finger joints to 0
         joint_position = [0] * 5 + q.tolist()
@@ -70,6 +76,7 @@ class KinematicsAnimator(object):
         js.header.stamp = rospy.Time.now()
         self.state_pub.publish(js)
         return
+
 
 def main():
     rospy.init_node('animating_csv_files', log_level=rospy.INFO)

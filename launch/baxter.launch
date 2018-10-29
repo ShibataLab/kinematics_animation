@@ -1,8 +1,8 @@
 <launch>
     <!-- define args -->
+    <arg name="use_file" default="true" />
     <arg name="file"  default="$(find kinematics_animation)/demos/baxter/clothing_trajectory.csv" />
     <arg name="freq" default="50.0" />
-    <arg name="rate" default="1.0" />
 
     <!-- urdf xml robot description loaded on the Parameter Server-->
     <param name="robot_description" command="$(find xacro)/xacro.py --inorder $(find baxter_description)/urdf/baxter.urdf.xacro"/>
@@ -21,9 +21,10 @@
       args="-d $(find kinematics_animation)/demos/baxter/baxter_rviz_config.rviz" />
 
     <!-- Animation from player.py-->
-    <node pkg="kinematics_animation" type="player.py" name="baxter_animation" output="screen">
-        <param name="file" value="$(arg file)" />
-        <param name="freq" value="$(arg freq)" />
-        <param name="rate" value="$(arg rate)" />
-    </node>
+    <group if="$(arg use_file)">
+        <node pkg="kinematics_animation" type="player.py" name="baxter_animation" output="screen">
+            <param name="file" value="$(arg file)" />
+            <param name="freq" value="$(arg freq)" />
+        </node>
+    </group>
 </launch>
